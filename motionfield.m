@@ -16,9 +16,6 @@ I = videos.read(ii);
 %[H,V] = edgemap(I,level);
 BW=edge(I(:,:,1),'sobel');
 
-
-
-
 BW=uint8(BW*255);
  mov(ii).cdata = repmat(BW,[1,1,3]);
 end
