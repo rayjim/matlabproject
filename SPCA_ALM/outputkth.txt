@@ -1,0 +1,72 @@
+Warning: No display specified.  You will not be able to display graphics on the screen.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2011 The MathWorks, Inc.
+                    R2011b (7.13.0.564) 64-bit (glnxa64)
+                              August 13, 2011
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+>> >> >> >> Starting matlabpool using the 'local' configuration ... connected to 8 labs.
+>> >> >> >> >> >> 
+ans =
+
+This is beginning class 1
+
+
+
+ans =
+
+This is beginning class 2
+
+
+
+ans =
+
+This is beginning class 3
+
+
+
+ans =
+
+This is beginning class 4
+
+
+
+ans =
+
+This is beginning class 5
+
+
+
+ans =
+
+This is beginning class 6
+
+
+this is SVD
+this is the end of SVD
+     1
+
+this is SVD
+this is the end of SVD
+     1
+
+this is SVD
+this is the end of SVD
+     1
+
+this is SVD
+this is the end of SVD
+     1
+
+this is SVD
+this is the end of SVD
+     1
+
+this is SVD
+this is the end of SVD
+     1
+
