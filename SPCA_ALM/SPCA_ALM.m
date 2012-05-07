@@ -20,10 +20,10 @@ function [x, numIter] = SPCA_ALM(A, lambda)
 % Copyright: University of California at Berkeley.
 
     % Initialize
-    disp('this is SVD');
+   % disp('this is SVD');
     n = size(A,1);
     [U, S, V] = svd(A);
-    disp('this is the end of SVD');
+    %disp('this is the end of SVD');
     X = (U(:,1)*U(:,1)');
     Y = zeros(n,n);
     c = 1;
@@ -38,7 +38,7 @@ function [x, numIter] = SPCA_ALM(A, lambda)
 
         % Minimize unconstrained lagrangian
         %%%%%%%%%%%%%%%%%%%%%%%%
-                disp(iter);
+              %  disp(iter);
                 Xk = X;
                 Xkm1 = Xk;
                 Yalm = Xk;
