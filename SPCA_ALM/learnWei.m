@@ -17,7 +17,8 @@ tstartALM =tic;
 [x, ALMIter]=SPCA_ALM(A,lambda);
 nonidex = find(x>0.01);
 globalnon = union(globalnon,nonidex);
-tstopALM = toc(tstartALM)
+ALMTimes(ii) = tstopALM;
 sprintf ('This is over class %d\n',ii)
 end
-save('sparsedic','globalnon');
+ALMTimes = mean(ALMTimes);
+save('ssparsedic','globalnon');

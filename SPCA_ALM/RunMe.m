@@ -28,7 +28,7 @@ for i = 1:length(dimensions)
         testvec=ratio*testvec; % + rand(n,p);
         testvec = testvec/norm(testvec);
         A = testvec*testvec'/p;
-        lambda = max(1e-5,min(diag(A))*0.5);%(min(diag(A)) + max(diag(A)))/2;
+        lambda = max(1e-5,(min(diag(A)) + max(diag(A)))/2);%(min(diag(A)) + max(diag(A)))/2;
         
         tstartDSPCA = tic;
         [x1, DSPCAIter] = DSPCA(A, lambda);

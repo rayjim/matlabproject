@@ -1,14 +1,15 @@
 clc;
 clear all;
 close all;
-matlabpool open 8;
+%matlabpool open;
 load kthData;
 actioncate = 6;
 n = 2400;
 trainnum = 52;
 I = zeros(n,trainnum);
 globalnon =[];
-parfor (ii = 1:actioncate, 8);
+%parfor (ii = 1:actioncate, 4);
+for ii = 1:actioncate
 sprintf ('This is beginning class %d\n',ii)
 I = tr_dat(:,[((ii*trainnum-trainnum+1):(trainnum*ii))]);
 I = I -mean(I,2)*ones(1,trainnum);
@@ -19,7 +20,8 @@ tstartALM =tic;
 [x, ALMIter]=SPCA_ALM(A,lambda);
 nonidex = find(x>0.1);
 globalnon = union(globalnon,nonidex);
-tstopALM = toc(tstartALM);
-disp(tstopALM);
+ALMTimes(ii) = tstopALM;
+
 end
+ALMTimes = mean(ALMTimes)
 save('sparsedickth','globalnon');
