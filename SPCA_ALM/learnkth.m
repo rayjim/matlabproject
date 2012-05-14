@@ -15,10 +15,11 @@ I = tr_dat(:,[((ii*trainnum-trainnum+1):(trainnum*ii))]);
 I = I -mean(I,2)*ones(1,trainnum);
 I1 = I/norm(I);
 A = I1*I1';
-lambda = max(0.002, min(diag(A))*0.5);
+lambda = max(0.001, min(diag(A))*0.5);
 tstartALM =tic;
 [x, ALMIter]=SPCA_ALM(A,lambda);
-nonidex = find(x>0.1);
+xMat = [xMat;x];
+nonidex = find(x>0.01|x<-0.01);
 globalnon = union(globalnon,nonidex);
 ALMTimes(ii) = tstopALM;
 
