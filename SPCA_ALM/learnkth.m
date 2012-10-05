@@ -1,15 +1,15 @@
 clc;
 clear all;
 close all;
-%matlabpool open;
+matlabpool open 8;
 load kthData;
 actioncate = 6;
 n = 2400;
 trainnum = 52;
 I = zeros(n,trainnum);
 globalnon =[];
-%parfor (ii = 1:actioncate, 4);
-for ii = 1:actioncate
+parfor (ii = 1:actioncate, 8);
+%for ii = 1:actioncate
 sprintf ('This is beginning class %d\n',ii)
 I = tr_dat(:,[((ii*trainnum-trainnum+1):(trainnum*ii))]);
 I = I -mean(I,2)*ones(1,trainnum);
@@ -24,5 +24,6 @@ globalnon = union(globalnon,nonidex);
 ALMTimes(ii) = tstopALM;
 
 end
-ALMTimes = mean(ALMTimes)
-save('sparsedickth','globalnon');
+%ALMTimes = mean(ALMTimes)
+save sparsekth globalnon
+save original xMat

@@ -3,7 +3,7 @@ clear all;
 clc;
 
 addpath([cd '/utilies']);
-load(['kthData']);
+load(['kth2']);
 load sparsedickth;
 tr_dat = tr_dat(globalnon,:);
 tt_dat = tt_dat(globalnon,:);

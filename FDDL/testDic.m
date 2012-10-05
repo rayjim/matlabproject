@@ -3,7 +3,7 @@ clear all;
 clc;
 
 addpath([cd '/utilies']);
-load(['kthData']);
+load(['kth']);
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 %FDDL parameter
