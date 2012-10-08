@@ -23,7 +23,9 @@ for i = 1:length(dimensions)
         testvec=rand(n,p);
         testvec = testvec - ones(n,1)*mean(testvec);
         numZero = n - floor(0.1*n);
-        randInd = randperm(n); randInd1 = randInd(1:numZero); randInd2 = randInd(numZero+1:end);
+        randInd = randperm(n); 
+        randInd1 = randInd(1:numZero); 
+        randInd2 = randInd(numZero+1:end);
         testvec(randInd1,:) = 0;
         testvec=ratio*testvec; % + rand(n,p);
         testvec = testvec/norm(testvec);

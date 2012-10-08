@@ -11,8 +11,7 @@ globalnon =[];
 parfor ii = 1:actioncate
 sprintf ('This is beginning class %d\n',ii)
 I = tr_dat(:,[((ii*trainnum-trainnum+1):(trainnum*ii))]);
-I = I -mean(I,2)*ones(1,trainnum);
-I1 = I/norm(I);
+I1 = prepro(I,trainnum);
 A = I1*I1';
 lambda = max(0.002, min(diag(A))*0.5);
 tstartALM =tic;
